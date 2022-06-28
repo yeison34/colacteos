@@ -1,0 +1,60 @@
+header{
+	text-align: center;
+	background-color: #5F889E;
+	color: #BDE6EC;
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+}
+body{
+	background-color: #B9ECEF;
+}
+input[type="text"],input[type="password"]{
+	display: block;
+	width: 280px;
+	height: 30px;
+	border-radius: 15px;
+	margin-top: 10px;
+	border-color: black;	
+}
+
+#formLogin{
+	display: flex;
+	justify-items: center;
+	justify-content: center;
+}
+
+#login{
+	text-align: center;
+}
+
+#logo img{
+	width: 150px;
+	height: 150px;
+}
+
+#ingresar{
+	margin-top: 35px;
+	width: 90px;
+	height: 30px;
+	border-radius: 5px;
+	border-color: white;
+	
+}
+
+#crearCuenta{
+	margin-top: 50px;
+}
+
+#crearCuenta a{
+	text-decoration: none;
+}
+
+#crearCuenta a: hover {
+	color: red;
+	background-color: red;
+}
+
+
+
