@@ -1,60 +1,398 @@
-header{
-	text-align: center;
-	background-color: #5F889E;
-	color: #BDE6EC;
-	position: absolute;
-	width: 100%;
-	top: 0px;
-	left: 0px;
-}
-body{
-	background-color: #B9ECEF;
-}
-input[type="text"],input[type="password"]{
-	display: block;
-	width: 280px;
-	height: 30px;
-	border-radius: 15px;
-	margin-top: 10px;
-	border-color: black;	
+*{
+	padding: 0;
+	margin: 0;
 }
 
-#formLogin{
+.header-index{
 	display: flex;
-	justify-items: center;
+	width: 100%;
+	height: 90px;
+	background-color: #dab639;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-index div{
+	width: 150px;
+	text-align: center;
+	color: #844FC6;
+	font-size: 20px;
+}
+
+.login{
+	height: 550px;
+	background-color: #93D0FA;
+	padding-top: 30px;
+	display: block;
+	width: 100%;
+}
+
+.login h1{
+	font-size: 2em;
+}
+
+.login .box-image img{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	height: 200px;
+	width: 200px;
+	margin-bottom: 10px;
+}
+
+.login div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login input{
+	display: block;
+	margin-bottom: 10px;
+}
+
+.login a{
+	text-decoration: none;
+	top: 50px;
+	color: black;
+	font-size: 1.2em;
+}
+
+.login .form{
+	margin-bottom: 30px;
+}
+
+.login a:hover{
+	color: red;
+}
+
+.login input[type="text"],[type="password"]{
+	background-color: #ddd;
+	border-radius: 6px;
+	width: 230px;
+	height: 35px;
+	border: solid 1px black;
+	box-shadow: 2px 2px 2px 2px black;
+}
+
+.login input[type="submit"]{
+	display: block;
+	height: 35px;
+	width: 80px;
+	margin: auto;
+	border-radius: 15px;
+	background-color: red;
+	color: white;
+	box-shadow: 2px 2px darkred;
+}
+
+.login input[type="submit"]:hover{
+	background-color: blue;
+	box-shadow: 2px 2px darkred;
+}
+
+footer{
+	position: absolute;
+	background-color: #dab639;
+	height: 150px;
+	width: 100%;
+}
+
+footer div{
+	position: absolute;
+	color: white;
+	right: 0;
+	bottom: 0;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+.logo-user{
+	position: absolute;
+	z-index: 1;
+	right: 0;
+	top: 0;
+	padding-top: 30px;
+}
+
+.logo-user img{
+	width: 50px;
+	height: 50px;
+	padding-right: 40px;
+    border-radius:50px;
+}
+
+.logo-user ul{
+	list-style: none;
+	border-radius: 10px;
+}
+
+.logo-user ul li > ul{
+	background-color: white;
+	display: none;
+	margin-top: 45px;
+}
+
+.logo-user ul li ul li{
+	padding-top: 10px;
+
+}
+
+.logo-user ul li:hover ul{
+	display: block;
+	float: left;
+}
+
+.nav{
+	padding: 20px 0;
+	background-color: #15181A;
+	width: 100%;
+}
+
+.nav ul{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+
+}
+
+.nav ul li{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 30px;
+}
+
+.nav ul li a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #15181A;
+	height: 45px;
+	border-radius: 10px;
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+}
+
+.nav ul li:hover a{
+	color: #253381;
+}
+
+.register-products-form{
+	display: flex;
 	justify-content: center;
 }
 
-#login{
-	text-align: center;
+.register-products-form ul{
+	display: block;
+	margin: 0 auto;
+	width: 550px;
 }
 
-#logo img{
+.register-products-form li label{
 	width: 150px;
-	height: 150px;
+	text-align: right;
+	font-size: 18px;
 }
 
-#ingresar{
-	margin-top: 35px;
-	width: 90px;
-	height: 30px;
-	border-radius: 5px;
-	border-color: white;
+.register-products-form li{
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0;
+}
+
+.register-products-form li input{
+	display: block;
+	margin: 0 auto;
+	height: 25px;
+	border-radius: 1px;
+
+}
+
+#enviar{
+	height: 35px;
+	width: 80px;
+	border-radius: 2px;
+}
+
+#enviar:hover{
+	background-color: darkgray;
 	
 }
 
-#crearCuenta{
+.register-products-form form{
+	width: 1000px;
+}
+
+
+.editarPerfil h2, .editarPerfil h1 ,.editarPerfil h3{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+}
+
+
+
+.general{
+	display: flex;
+	justify-content: center;
+}
+
+.general form{
+	width: 400px;
+}
+
+.general ul{
+	list-style: none;
+}	
+
+.general ul li{
+	display: flex;
+	padding-top: 20px;
+	justify-content: space-between;
+	text-align: right;
+}
+
+.general ul li select{
+	width: 175px;
+}
+
+.general ul li input{
+	width: 171px;
+}
+
+.img-actual{
+	display: flex;
+	justify-content: center;
+	height: 200px;
+}
+
+.imagen-usuario input{
+	padding: 25px 150px;
+}
+
+.submit-actualizar{
+	display: flex;
+	justify-content: center;
+	margin: 25px 0;
+}
+
+.submit-actualizar input{
+	width: 75px;
+	height: 30px;
+}
+
+.user-online-update{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+
+.cod-proveedor-input{
+	background-color: red;
+}
+
+.gestionar-productos{
+	margin-top: 20px;
+	height: 400px;
+	overflow: scroll;
+}
+
+.gestionar-productos .tabla-productos{
+	display: flex;
+	justify-content: center;
+}
+
+.gestionar-productos th{
+	text-align: left;
+	padding-right: 50px;
+}
+
+.gestionar-productos button{
+	background-color: #32C6E7;
+	padding: 0 20px;
+	height: 30px;
+	border: 1px solid black;
+	color: white;
+	border-radius: 5px;
+}
+
+.gestionar-productos .eliminar{
+	background-color: #F93378;
+}
+
+.gestionar-productos .modificar{
+	background-color: #37F840;
+}
+
+
+.input-error{
+	border: 1.5px solid red;
+	background-image: url("../img/mal.jpg");
+	background-size: 15px;
+	background-repeat: no-repeat;
+	background-position: right;	
+}
+
+.input-ok{
+	border: 1.5px solid green;
+	background-image: url("../img/ok.jpg");
+	background-size: 15px;
+	background-repeat: no-repeat;
+	background-position: right;	
+}
+
+.mensajes{
+	display: block;
+	width: 220px;
+	height:500px;
+	float:right;
+}
+
+.mensajes small{
+	
+	display: block;
+}
+
+#mensaje-error-codigo{
+	padding-top: 25px;
+	position: relative;
+	height: 20px;
+	margin-top: 25px 0;
+	color:red;
+}
+
+#mensaje-error-nombre{
+	padding-top: 15px;
+	height: 20px;
+	position: relative;
+	color:red;
+	margin-top: 105px;
+}
+
+#mensaje-error-descripcion{
+	height: 20px;
+	position: relative;
+	color:red;
 	margin-top: 50px;
 }
 
-#crearCuenta a{
-	text-decoration: none;
+#mensaje-error-precio{
+	height: 20px;
+	position: relative;
+	color:red;
+	margin-top: 50px;
 }
 
-#crearCuenta a: hover {
-	color: red;
-	background-color: red;
-}
+
+
+
+
+
+
+
+
+
 
 
 

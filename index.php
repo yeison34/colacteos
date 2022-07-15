@@ -5,24 +5,40 @@
 	<title>Colacteos</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
+
 <body>
 	<?php include ("View/Header.php");
-	//include ("Controller/Conexion.php");
 	?>
-	<h1 id="login">Login</h1>
-	<div align="center" id="logo">
-		<img src="img/colacteos.png">
-	</div>
-	<form action="View\prueba.php" method="post" id="formLogin">
-		<div align="center">
-			<input type="text" name="usuario">	
-			<input type="password" name="contrasena" placeholder="contraseña">
-			<input type="submit" name="ingresar" value="Ingresar" id="ingresar">	
-		</div>
-	</form>
-	<div id="crearCuenta" align="center">
-			<a href="View/crearCuenta.php">Crear Cuenta</a>
-	</div>
-		
+		<section class="login">
+			<div>
+				<h1>Login</h1>
+			</div>
+			<div class="box-image">
+				<img src="img/colacteos.png">
+			</div>
+			<div class="form">
+				<form action="View/Logeo.php" method="post">
+					<input type="text" name="usuario" class="campoUsuario" id="cusuario">	
+					<input type="password" name="contrasena" placeholder="contraseña" class="campoUsuario">
+					<input type="submit" name="ingresar" value="Ingresar"class="campoUsuario">
+				</form>
+			</div>
+			<div>
+				<a href="View/CrearCuenta.php">Crear Cuenta</a>
+			</div>	
+		</section>
+	<?php include ("View/Footer.php");
+	?>
+	<script>
+	 	var usuario = document.getElementById('cusuario');
+
+ 		var cantidad_caracteres = function(){
+ 			if(usuario.value.length==8){
+ 				console.log("ya llego a las 8 caracteres");
+ 			}
+ 		};
+
+ 		usuario.addEventListener("change",cantidad_caracteres);
+ 	</script>	 	
 </body>
 </html>

@@ -1,7 +1,7 @@
-<header>
-	<h1>Colacteos</h1>
-	<hr/>
+<header class="header-index">
+	<div>
+		<h1>Colacteos</h1>
+	</div>
 </header>
-<?php
-echo "<br><br><br><br>";
-?>
+	
+
