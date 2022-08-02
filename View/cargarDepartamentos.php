@@ -10,11 +10,11 @@
         $resultado=$stament->fetchall(PDO::FETCH_ASSOC);
         $cont=0;
         ?>
-               <option>Selected</option>
+               <option>Selecciona Depto-----</option>
         <?php
         while($cont!=count($resultado)){
             ?>
-                <option><?php echo $resultado[$cont]['nom_dpto'];?></option>
+                <option value="<?php echo $resultado[$cont]['nom_dpto'];?>"><?php echo $resultado[$cont]['nom_dpto'];?></option>
             <?php
             $cont++;
         }

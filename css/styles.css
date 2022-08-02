@@ -152,7 +152,6 @@ footer div{
 	display: flex;
 	width: 100%;
 	justify-content: center;
-
 }
 
 .nav ul li{
@@ -193,6 +192,10 @@ footer div{
 	width: 150px;
 	text-align: right;
 	font-size: 18px;
+}
+
+.section-form-products{
+	padding: 30px 0;
 }
 
 .register-products-form li{
@@ -305,16 +308,35 @@ footer div{
 
 .gestionar-productos th{
 	text-align: left;
-	padding-right: 50px;
+	padding-right: 30px;
+}
+
+.gestionar-productos tr{
+	height: 10px;
+}
+.gestionar-productos .img-products{
+	height: 10px;
+	width: 10px;
+}
+.imagen-products{
+	width: 80px;
+	height: 80px;
 }
 
 .gestionar-productos button{
 	background-color: #32C6E7;
 	padding: 0 20px;
+	margin: 0 5px;
 	height: 30px;
 	border: 1px solid black;
 	color: white;
 	border-radius: 5px;
+}
+
+.gestionar-productos .btn-nuevo{
+	display: flex;
+	width: 180px;
+	justify-content: center;
 }
 
 .gestionar-productos .eliminar{
@@ -325,6 +347,16 @@ footer div{
 	background-color: #37F840;
 }
 
+.imagen-producto{
+	display: flex;
+	align-items: center;
+}
+
+#img_producto{
+	height: 100px;
+	width: 100px;
+	margin-right: 185px;
+}
 
 .input-error{
 	border: 1.5px solid red;
@@ -382,6 +414,211 @@ footer div{
 	position: relative;
 	color:red;
 	margin-top: 50px;
+}
+
+.productos-comprar{
+	display: flex;
+	width: 100%;
+	height: 500px;
+	overflow: scroll;
+}
+
+.lista1{
+	width: 100%;
+	height: 500px;
+}
+
+.img-just{
+	height: 160px;
+	width: 160px;
+}
+
+.fila{
+	padding: 20px 5px;
+	display:inline-block;
+}
+
+.marco{
+	border: #054875 solid 2px;
+	padding: 0 auto;
+	height: 240px;
+	width: 100px;
+	padding: 0 50px;
+	box-shadow: #5bb1eb 1px 1px 1px 1px;
+}
+
+.marco li{
+	display: flex;
+	justify-content: center;
+	list-style: none;
+}
+
+.marco li{
+	text-align: left;
+}
+
+.modal-comprar-producto{
+	width: 400px;
+	height: 440px;
+	padding-top: 20px;
+	background: white;
+	position: relative;
+	border: #15181A solid 1px;
+	display: flex;
+	justify-content: center;
+}
+
+.container-modal{
+	position: absolute;
+	padding: 20px 35%;
+	opacity: 0.9;
+	visibility: hidden;
+	background: gray;
+	height: 500px;
+	pointer-events: auto;
+}
+
+.container-modal-visible{
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.container-modal-invisible{
+	visibility: hidden;
+	pointer-events: auto;
+}
+
+.form-solicitud li{
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 20px;
+}
+
+.form-solicitud input[type="text"]{
+	height: 25px;
+	margin-left: 20px;
+}
+
+.form-solicitud label{
+	margin: 0px 20px;	
+}
+
+.botones-solicitud {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
+.botones-solicitud li{
+	display: block;
+	margin: 20px 10px;
+}
+.botones-solicitud #confirmar{
+	background: #33f9be;
+	border: solid black 1px;
+	height: 35px;	
+	padding: 0 10px;
+
+}
+
+.botones-solicitud #cancelar{
+	background: #F93378;
+	border: solid black 1px;
+	height: 35px;	
+	padding: 0 10px;	
+	margin-left: 10px;
+}
+
+.pedidos{
+	height: 500px;
+	overflow: scroll;
+	width: 100%;
+}
+
+li{
+	list-style: none;
+}
+
+.btn-acciones-productos button{
+	padding: 5px 10px;
+	margin-left: 5px;
+}
+
+.btn-modificar-pedido{
+	background:#32C6E7;
+	border-radius: 5px;
+}
+
+.btn-eliminar-pedido{
+	background: #F93378;
+	border-radius: 5px;
+}
+
+.container-table-pedido{
+	padding: 40px 40px;
+	
+}
+
+.container-table-pedido table{
+	width: 100%;
+	padding: 40px 40px;
+	margin: 0 60px;
+	display: flex;
+	justify-content: center;
+}
+
+.container-table-pedido th{
+	text-align: left;
+	width: 300px;
+}
+
+.btn-generar-solicitud{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.btn-solicitar{
+	padding: 7px 7px;
+	margin: 0 4px;	
+	background: #37F840;
+	border: solid black 1px;
+}
+
+.btn-cancelar-solicitud{
+	padding: 7px 7px;
+	margin: 0 4px;
+	background: #F93378;
+	border: solid black 1px;		
+}
+
+.nav-pedidos{
+	width: 100%;
+	height: 50px;
+	background: #3b3e3f;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	font-size: 15px;
+}
+
+.nav-pedidos ul li{
+	display: inline;
+	list-style: none;
+	margin: 0 5px;
+	width: 200px;
+}
+
+.nav-pedidos ul li a{
+	text-decoration: none;
+	height: 50px;
+}
+
+.nav-pedidos ul li a:hover{
+	padding: 17px 0;
+	border-radius: 1px;
+	color: #ddd;
 }
 
 

@@ -11,15 +11,13 @@
 		include_once("Header.php");
 		include_once("navbarProductos.php");
 		include_once("LogoUsuario.php");
-		include_once("../Model/Conexion.php");
-		$cod=$_GET['id'];
-		$conexion=new Conexion();
-		$conexion=$conexion->getConection();
-		$sql="DELETE FROM producto where cod_producto='$cod'";
-		if($stament=$conexion->prepare($sql)){
-			$stament->execute();
+		include_once("../Model/Productos/Producto.php");
+		if(isset($_SESSION['proveedor'])){
+			$producto=new Producto();
+			$codigo_producto=$_GET['id'];
+			$producto->deleteProducts($codigo_producto);
 			header("location:GestionarProductos.php");
-		} 
+		}
 	?>
 </body>
 </html>

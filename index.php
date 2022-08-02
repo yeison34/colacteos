@@ -17,8 +17,8 @@
 				<img src="img/colacteos.png">
 			</div>
 			<div class="form">
-				<form action="View/Logeo.php" method="post">
-					<input type="text" name="usuario" class="campoUsuario" id="cusuario">	
+				<form action="Model/login.php" method="post">
+					<input type="text" name="usuario" class="campoUsuario" id="usuario">	
 					<input type="password" name="contrasena" placeholder="contraseña" class="campoUsuario">
 					<input type="submit" name="ingresar" value="Ingresar"class="campoUsuario">
 				</form>

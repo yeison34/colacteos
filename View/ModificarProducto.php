@@ -10,34 +10,33 @@
 	<?php 
 		include_once("../View/Header.php");
 		include_once("../View/LogoUsuario.php");
+		include_once("../Model/Productos/Producto.php");
+		include_once("../View/navbarProductos.php");
 	?>
 	<?php
-			include_once("../Model/Conexion.php");
-			$conexion=new Conexion();
-			$conexion=$conexion->getConection();
-			$usuario=$_SESSION['usuario'];
-
-			if($cod_producto=$_GET['id']){
-				$sql="SELECT *FROM producto WHERE cod_producto='$cod_producto' and nit_empresa='$usuario'";
-				$stament=$conexion->query($sql);
-				$resultado=$stament->fetch(PDO::FETCH_ASSOC);
-			}			
+		$producto;
+		if(isset($_SESSION['proveedor'])){
+			$producto=new Producto();
+			$cod_producto=$_GET['id'];
+			$resultado=$producto->getProduct($cod_producto);
+		}		
 	?>
 	<section class="section-form-products">
 					<div class="register-products-form">	
-						<form action="../View/BuscarModificar.php" method="post">
+						<form action="../View/ActualizarProducto.php" method="post" enctype="multipart/form-data">
 							<ul class="first-inputs">
-								<li><label>Codigo producto: </label><input type="text" name="codigo_producto" value="<?php echo $resultado['cod_producto'];?>"  style="border: 2px solid black; background-color: lightgrey;"></li>
-								<li><label>Codigo Proveedor: </label><input type="text" name="nitEmpresa" value="<?php echo $_SESSION['usuario'];?>" disabled style="border: 2px solid black; background-color: lightgrey;"></li>
+								<li><label>Codigo producto: </label><input type="text" name="codigo_producto" value="<?php echo $cod_producto;?>"></li>
+								<li><label>Codigo Proveedor: </label><input type="text" name="nitEmpresa" value="<?php echo $_SESSION['proveedor'];?>" disabled style="border: 2px solid black; background-color: lightgrey;"></li>
 								<li><label>Nombre producto: </label><input type="text" name="nombre_producto" value="<?php echo $resultado['nombre_producto'];?>"></li>
 							</ul>
 							<ul class="seconds-inputs">
 								<li><label>Descripción: </label><input type="text" name="a_descripcion" class="campoDescripcion" value="<?php echo $resultado['descripcion'];?>"></li>
 								<li><label>Precio Unitario: </label><input type="text" name="precio_unitario" class="camposPrecio" value="<?php echo $resultado['precio_unit'];?>"></li>
+								<li class="imagen-producto"><label>Imagen Actual: </label><img src="../Model/Productos/img_productos/<?php echo $resultado['imagen']?>" id="img_producto"></li>
+								<li><label>Imagen Nueva</label><input type="file" name="imagen"></li>
 							</ul>
 							<ul>
 								<li><input type="submit" name="actualizar" value="Actualizar"></li>
-
 							</ul>
 						</form>
 					</div>	

@@ -11,6 +11,7 @@
 		include_once("../View/Header.php");
 		include_once("../View/navbarProductos.php");
 		include_once("../View/LogoUsuario.php");
+		include_once("../Model/Productos/Producto.php");
 	?>
 	<br><center><h1>Productos Registrados</h1></center>
 	<section class="gestionar-productos">
@@ -23,30 +24,31 @@
 					<th>Nombre Producto</th>
 					<th>Descripción</th>
 					<th>Valor Unitario</th>
-					<th><a href="../View/InsertarProductos.php"><button>Nuevo</button></a></th>
+					<th class="img_products">Imagen</th>
+					<th class='btn-nuevo'><a href="../View/InsertarProductos.php"><button>Nuevo</button></a></th>
 				</tr>
 				<?php
-					$user=$_SESSION['usuario'];
-					$consulta="SELECT *FROM producto where nit_empresa='$user' order by 2";
-					$request=$conexion->query($consulta);
-					$resul=$request->fetchall(PDO::FETCH_ASSOC);
-					$cont=0;
-					while($cont!=count($resul)){
+					if(isset($_SESSION['proveedor'])){
+						$user=$_SESSION['proveedor'];
+						$producto=new Producto();
+						$resultado=$producto->getProductsAll($user);
+						$cont=0;
+						while($cont!=count($resultado)){
 						?>
 						<tr>
 							<td><?php echo $cont+1;?></td>
-							<td><?php echo $resul[$cont]['nit_empresa'];?></td>
-							<td><?php echo $resul[$cont]['cod_producto'];?></td>
-							<td><?php echo $resul[$cont]['nombre_producto'];?></td>	
-							<td><?php echo $resul[$cont]['descripcion'];?></td>
-							<td><?php echo $resul[$cont]['precio_unit'];?></td>
-							<td><a href="../View/ModificarProducto.php?id=<?php echo$resul[$cont]['cod_producto']?>"><button class="modificar">Modificar</button></a></td>
-							<td><a href="../View/EliminarProductos.php?id=<?php echo $resul[$cont]['cod_producto']?>"><button class="eliminar">Eliminar</button></a></td>
+							<td><?php echo $resultado[$cont]['nit_empresa'];?></td>
+							<td><?php echo $resultado[$cont]['cod_producto'];?></td>
+							<td><?php echo $resultado[$cont]['nombre_producto'];?></td>	
+							<td><?php echo $resultado[$cont]['descripcion'];?></td>
+							<td><?php echo $resultado[$cont]['precio_unit'];?></td>
+							<td><img src="../Model/Productos/img_productos/<?php echo $resultado[$cont]['imagen']?>" class="imagen-products"></td>
+							<td><a href="../View/ModificarProducto.php?id=<?php echo$resultado[$cont]['cod_producto']?>"><button class="modificar">Modificar</button></a><a href="../View/EliminarProductos.php?id=<?php echo $resultado[$cont]['cod_producto']?>"><button class="eliminar">Eliminar</button></a></td>
 						</tr>
 				<?php		
 					$cont++;
-					}?>
-				
+					}
+				}?>
 			</table>	
 		</div>
 	</section>
