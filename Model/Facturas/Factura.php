@@ -78,6 +78,22 @@
             $resultado=$stament->fetchall(PDO::FETCH_ASSOC);
             return $resultado;
         }
+
+        public function setReportePdf($id,$proveedor,$fecha,$hora,$nombre){
+            $sql="INSERT into reportes (cod_administrador,nit_empresa,fecha_reporte,hora,nombre_reporte) values(?,?,?,?,?)";
+            $datos=array($id,$proveedor,$fecha,$hora,$nombre);
+            $stament=$this->conexion->prepare($sql);
+            $stament->execute($datos);
+        }
+
+        public function getReportesPdfAdmin($id){
+            $sql="SELECT *from reportes where cod_administrador=?";
+            $datos=array($id);
+            $stament=$this->conexion->prepare($sql);
+            $stament->execute($datos);
+            $resultado=$stament->fetchall(PDO::FETCH_ASSOC);
+            return $resultado;
+        }
     }
 
 ?>

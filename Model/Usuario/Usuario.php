@@ -29,5 +29,19 @@
                 return false;
             }
         }
+
+        public function insertarUsuario($usuario,$password){
+            $sql="INSERT into usuario values(?,?)";
+            $datos=array($usuario,$password);
+            $stament=$this->conexion->prepare($sql);
+            $stament->execute($datos);
+        }
+
+        public function getProveedores(){
+            $sql="SELECT *from proveedor";
+            $stament=$this->conexion->query($sql);
+            $resultado=$stament->fetchall(PDO::FETCH_ASSOC);
+            return $resultado;
+        }
     }
 ?>

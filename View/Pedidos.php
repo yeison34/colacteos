@@ -62,7 +62,7 @@
             <?php
                 }else{
                     ?>
-                        <h1>Aun no tiene pedidos pendientes</h1>
+                        <h3>Aun no tiene pedidos pendientes</h3>
                     <?php
                 }
             ?>

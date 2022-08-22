@@ -22,9 +22,6 @@
 					<input type="password" name="contrasena" placeholder="contraseña" class="campoUsuario">
 					<input type="submit" name="ingresar" value="Ingresar"class="campoUsuario">
 				</form>
-			</div>
-			<div>
-				<a href="View/CrearCuenta.php">Crear Cuenta</a>
 			</div>	
 		</section>
 	<?php include ("View/Footer.php");
@@ -37,7 +34,7 @@
  				console.log("ya llego a las 8 caracteres");
  			}
  		};
-
+		
  		usuario.addEventListener("change",cantidad_caracteres);
  	</script>	 	
 </body>

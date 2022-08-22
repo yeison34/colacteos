@@ -39,7 +39,7 @@
             return $resultado;
         }
 
-        function delete($id){
+        public function delete($id){
             $sql="DELETE from proveedor where nit_empresa=?";
             $datos=array($id);
             $stament=$this->getConexion()->prepare($sql);

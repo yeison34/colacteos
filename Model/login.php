@@ -1,7 +1,7 @@
 <?php
-    include_once("../Model/Usuario/Usuario.php");
-    include_once("../Model/Proveedor/Proveedor.php");
-    include_once("../Model/Administrador/Administrador.php");
+    include_once("Usuario/Usuario.php");
+    include_once("Proveedor/Proveedor.php");
+    include_once("Administrador/Administrador.php");
     $usuario=new Usuario();
     if(!empty($_POST['usuario']) && !empty($_POST['contrasena'])){
         $id=$_POST['usuario'];

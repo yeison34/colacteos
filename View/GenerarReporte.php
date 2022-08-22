@@ -9,6 +9,7 @@
             $factura->insertFactura($fecha,$_SESSION['administrador']);
             $factura->insertDetalleFactura();
             $factura->deleteVirtual($_SESSION['administrador']);
+            include_once("../Model/GenerarPdf.php");
             header("location:Pedidos.php");
         }else if($bandera=="false"){
             $factura->deleteVirtual();
