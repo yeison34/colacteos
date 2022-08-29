@@ -1,9 +1,9 @@
 <?php
     class Conexion{
-        private $server="ec2-18-215-96-22.compute-1.amazonaws.com";
-        private $database="dbfhk2s6f5jgfn";
-        private $password="4011d4d9cd395072d8f3d3bf02d922b363761e820f7419597b46147a976b04ef";
-        private $user="nbpncaoutwtzkt";
+        private $server="ec2-54-160-109-68.compute-1.amazonaws.com";
+        private $database="d8hicuidnjuh57";
+        private $password="54f732dd2ad2f6180ee01ac6759985d30f592dfab91640bbead081660d01915f";
+        private $user="plrtplzrogxgxa";
         private $conexion;
 
         public function __construct(){
