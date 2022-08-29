@@ -1,6 +1,6 @@
 <?php
     class Conexion{
-        private $server="ec2-18-215-96-22.compute-1.amazonaws.com";
+        private $server="postgres://nbpncaoutwtzkt:4011d4d9cd395072d8f3d3bf02d922b363761e820f7419597b46147a976b04ef@ec2-18-215-96-22.compute-1.amazonaws.com:5432/dbfhk2s6f5jgfn";
         private $database="dbfhk2s6f5jgfn";
         private $password="4011d4d9cd395072d8f3d3bf02d922b363761e820f7419597b46147a976b04ef";
         private $user="nbpncaoutwtzkt";
