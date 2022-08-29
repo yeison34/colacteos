@@ -10,7 +10,7 @@
             
             try{
                 $this->conexion=new PDO("pgsql:host=".$this->server.";dbname=".$this->database.";user=".$this->user.";password=".$this->password);
-                    //echo "Conexion Existosa";    
+                    echo "Conexion Existosa";    
             }catch(Exception $e){
                 echo "<br>No se pudo conectar a la base de datos: ".$this->database."<br>";
             }    
