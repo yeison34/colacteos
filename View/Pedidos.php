@@ -21,6 +21,7 @@
             $proveedor=new Proveedor(null,null,null,null,null,null,null,null);
             $virtual=new Factura();
             $resultado=$virtual->getVirtual($_SESSION['administrador']);
+            
         }
     ?>
     
@@ -51,6 +52,7 @@
                                 <td class="btn-acciones-productos"><li><a href="ModificarPedido.php?id=<?php echo $resultado[$cont]['id_detalle']?>"><button class="btn-modificar-pedido">Modificar</button></a><a href="EliminarPedido.php?id=<?php echo $resultado[$cont]['id_detalle']?>"><button class="btn-eliminar-pedido">Eliminar</button></a></li><td>
                             </tr>    
                         <?php
+                        
                         $cont++;
                     }
                 ?>

@@ -13,16 +13,19 @@
 			include_once("LogoUsuario.php");
 			include_once("navbarProductos.php");
 			include_once("../Model/Productos/Producto.php");
+			include_once("../Model/Productos/Stock.php");
 		?>
 		<?php
 			if(isset($_SESSION['proveedor'])){
 				if(isset($_POST['enviar'])){
+					$stock=new Stock();
 					$producto=new Producto();
 					$cod=$_SESSION['proveedor'];
 					$codigopro=$_POST['codigoProducto'];
 					$nombre=$_POST['nombreProducto'];
 					$des=$_POST['descripcion'];
 					$valor=$_POST['precioUnitario'];
+					$stockCantidad=$_POST['stock'];
 					
 					if($_FILES['imagen']['name']=="" || $_FILES['imagen']['name']==null){
 						$name="default.png";
@@ -33,6 +36,7 @@
 						move_uploaded_file($ruta_temp,$ruta_destino.$name);
 					}
 					$producto->insertProducts($codigopro,$nombre,$des,$valor,$cod,$name);
+					$stock->insertarStock($codigopro,$stockCantidad,$cod);
 					header("location:GestionarProductos.php");
 				}	
 			}
@@ -53,6 +57,7 @@
 								<li><label>Nombre producto: </label><input type="text" name="nombreProducto" id="nombre-producto"></li>
 								<li><label>Descripción: </label><input type="text" name="descripcion" class="campoDescripcion" id="descripcion"></li>
 								<li><label>Precio Unitario: </label><input type="text" name="precioUnitario" class="camposPrecio" id="precio"></li>	
+								<li><label>Stock: </label><input type="text" name="stock" class="camposPrecio"></li>	
 								<l1><input type="file" name="imagen"></li>						
 								<li class="btn-submit"><input type="submit" name="enviar" value="Insertar" id="enviar"></li>						
 							</ul>

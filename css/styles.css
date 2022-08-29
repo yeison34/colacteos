@@ -695,8 +695,92 @@ li{
 	padding: 5px;
 }
 
+.almacen{
+	height: 500px;
+
+}
+
+.container-table-stock{
+	display: flex;
+	justify-content: center;
+	
+}
+
+.container-table-stock table th{
+	padding: 10px 30px;
+	text-align: left;
+	background: rgb(48, 46, 46);
+	color: white;
+}
 
 
+.container-table-stock table td{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.container-table-stock table tr:nth-child(even){
+	background: #f1f1f5;
+} 
+
+.container-table-stock table a{
+	padding: 0 40%;
+}
+
+.existencias{
+	padding: 0 10px;
+}
+
+
+.texto-advertencia{
+	height: 10px;
+	color:red;
+}
+
+.container-modal-almacen{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	background: #3b3e3f;
+	visibility: hidden;
+	opacity: 0.7;
+	visibility: hidden;
+}
+
+.almacen-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 120px 0;
+	background: white;
+	height: 300px;
+	width: 500px;
+	opacity: 1;
+	visibility: hidden;
+}
+
+.almacen-container input[type="text"]{
+	height: 30px;
+	margin: 20px 10px;
+}
+
+.almacen-container ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60px;
+}
+
+.almacen-container ul input[type="submit"]{
+	margin: 0 20px;
+	padding: 10px;
+}
+
+.container-almacen-visible{
+	visibility: visible;
+}
 
 
 

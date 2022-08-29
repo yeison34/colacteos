@@ -1,5 +1,6 @@
 <?php
     include_once("../Model/Facturas/Factura.php");
+    include_once("../Model/Productos/Stock.php");
     session_start();
     if(isset($_SESSION['administrador'])){
         if(isset($_POST['Confirmar'])){
